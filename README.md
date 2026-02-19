@@ -1,9 +1,7 @@
-﻿# BlogHub - Backend
-[![Screenshot](https://pomodo.s3.eu-north-1.amazonaws.com/Screenshot+2025-04-08+122357.png)]([https://your-link.com](https://blog-hub-frontend-phi.vercel.app/))
+﻿# Job Portal - Backend
 
-The BlogHub backend is built with Node.js, Express.js, and MongoDB. It handles user authentication using JWT, and provides secure RESTful APIs for blog creation, retrieval, updating, and deletion, ensuring only authors can modify their own posts.
+The JobPortal backend is built with Node.ts, Express, and MongoDB. It handles user authentication using JWT, and provides secure RESTful APIs for blog creation, retrieval, updating, and deletion, ensuring only authors can modify their own posts.
 
- https://youtu.be/eZ2xl4y49Dg
 ## Project Structure
 ```
 project-root/
@@ -15,11 +13,10 @@ project-root/
             │
             ├── controllers/
             │   ├── authController.ts
-            │   ├── blogController.ts
-            │   └── userController.ts
+            │   └── jobController.ts
             │
             ├── interfaces/
-            │   ├── blogInterface.ts
+            │   ├── jobInterface.ts
             │   ├── multerInterface.ts
             │   └── userInterface.ts
             │
@@ -33,7 +30,6 @@ project-root/
             │
             ├── routes/
             │   ├── authRouter.ts
-            │   ├── blogRouter.ts
             │   └── userRouter.ts
             │
             ├── utils/
@@ -47,15 +43,15 @@ project-root/
 - User registration and authentication
   - Login
   - Registration
-  - Blog Management 
-- CRUD operations for blog 
-  - Listing blog posts
+  - job Management 
+- CRUD operations for job 
+  - Listing job posts
   - Inline delete & edit options
   - PopUp action for creating new posts
 
 ## Technologies Used
 
-- Node.js
+- Node.ts
 - Express.js
 - MongoDB
 - JWT for authentication
@@ -64,7 +60,7 @@ project-root/
 
 ### Prerequisites
 
-- Node.js
+- Node.ts
 - MongoDB
 
 ### Installation
