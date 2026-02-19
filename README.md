@@ -88,7 +88,7 @@ project-root/
 
 1. Clone the repository
    ```sh
-   https://github.com/Theakashprasad/BlogHub_backend.git
+   https://github.com/Theakashprasad/jobPortal_backend.git
    ```
 2. Install NPM packages
    ```sh
