@@ -7,19 +7,16 @@ import Job from "../Models/jobModel";
 export const getJobs = async (req: CustomRequest, res: Response) => {
   try {
     const { id } = req.params;
-   const companyId = Number(id);
-
-   if (isNaN(companyId)) {
-    return res.status(400).json({ message: "Invalid companyId" });
-  }
+   const companyId = id;
+  
   
   const jobs = await Job.find({ companyId }).sort({ 
-    createdAt: -1,
+    createdAt: -1, 
   });
 // console.log('all data',jobs)
     return res.status(200).json(jobs);
   } catch (error) {
-    console.error("Get Jobs By Company Error:", error);
+    console.error("Get Jobs By Company Error:", error); 
     return res.status(500).json({
       message: "Internal Server Error",
     });
@@ -54,17 +51,17 @@ export const postJob = async (req: CustomRequest, res: Response) => {
     if (req.user) {
       jobData.user = req.user;
     }
-
+ 
     const newJob = await Job.create(jobData);
         console.log('DB UPDATE',newJob)
     return res.status(201).json({
       message: "Job created successfully",
       job: newJob,
     });
-  } catch (error) {
+  } catch (error) {  
     console.error("Post Job Error:", error);
     return res.status(500).json({
-      message: "Internal Server Error",
+      message: "Internal Server Error", 
     });
   
   }

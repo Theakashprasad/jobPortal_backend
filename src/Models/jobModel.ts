@@ -6,7 +6,7 @@ const JobSchema = new Schema<IJob>(
     user: { type: Schema.Types.ObjectId, ref: "User" },
 
     title: { type: String, required: true },
-    companyId: { type: Number, required: true },
+    companyId: { type: String, required: true },
 
     country: { type: String, required: true },
     city: { type: String, required: true },

@@ -4,7 +4,7 @@ export default interface IJob {
   user?: Types.ObjectId;
 
   title: string;
-  companyId: number;
+  companyId: string;
 
   country: string;
   city: string;
